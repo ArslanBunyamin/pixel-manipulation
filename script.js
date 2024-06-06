@@ -17,7 +17,7 @@ function draw() {
   if (!video.videoHeight) return requestAnimationFrame(draw);
   if (!ctx) return alert("html canvas desteklenmiyor!");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  var resolution = 4;
+  var resolution = 12;
   var videoWidth = video.videoWidth / resolution;
   var videoHeight = video.videoHeight / resolution;
   ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
