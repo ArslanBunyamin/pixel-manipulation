@@ -3,9 +3,9 @@ var ctx = canvas.getContext("2d", { willReadFrequently: true });
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var shade =
-  "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:," +
+  " .'`^" +
   '"' +
-  "^`'. ";
+  ",:;Ili!<>~+-_?-[]{})1(|/tfjrxnurovcxzXYUJCQL0OZmwqpbkdhao*#MW&8%B@$";
 function getPixelBrightness(imageData, x, y) {
   var index = (y * imageData.width + x) * 4;
   var red = imageData.data[index];
@@ -37,6 +37,7 @@ function draw() {
       var brihtness = getPixelBrightness(data, x, y);
       var shadeIndex = Math.floor((brihtness * shade.length) / 255);
       ctx.font = charSize + "px Arial";
+      ctx.fillStyle = "white";
       ctx.fillText(shade[shadeIndex], paddingleft + x * charSize, y * charSize);
     }
   }
